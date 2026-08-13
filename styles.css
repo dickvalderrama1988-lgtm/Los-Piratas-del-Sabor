@@ -170,3 +170,20 @@
 #carta .menu-card img{width:100%;height:240px;object-fit:cover}
 #carta .menu-card h3,#carta .menu-card p{margin-left:24px;margin-right:24px}
 #carta .menu-card h3{margin-top:22px}
+
+/* ===== PORTADA FINAL: COMPOSICION AMPLIA Y CENTRADA ===== */
+@media(min-width:851px){
+  .portada-v3{min-height:780px;}
+  .portada-v3__texto{flex:0 0 48%;max-width:48%;padding:54px 4vw 42px;align-items:center;text-align:center;}
+  .portada-v3__foto{flex:0 0 52%;max-width:52%;min-height:780px;padding:0;}
+  .portada-v3__foto img{width:100%;height:100%;max-height:none;object-fit:contain;object-position:center center;}
+  .portada-v3__eyebrow{width:100%;text-align:center;}
+  .portada-v3__linea{width:min(100%,540px);margin-left:auto;margin-right:auto;}
+  .portada-v3 h1{font-size:clamp(72px,6vw,108px);line-height:.82;text-align:center;margin-bottom:16px;}
+  .portada-v3__copy{text-align:center;max-width:660px;}
+  .portada-v3__acciones{justify-content:center;}
+  .portada-v3__beneficios{width:100%;text-align:left;}
+}
+.restobar-banner{display:flex;align-items:center;justify-content:center;gap:15px;width:max-content;max-width:100%;margin:0 auto 28px;padding:9px 28px;background:linear-gradient(180deg,#efbd4b,#c98916);color:#111;border:1px solid #f1c75f;box-shadow:0 8px 24px rgba(217,155,43,.18);font-size:clamp(18px,1.7vw,28px);font-weight:900;letter-spacing:4px;line-height:1;}
+.restobar-banner span{font-size:.7em;}
+@media(max-width:850px){.restobar-banner{margin:0 auto 24px;padding:9px 18px;font-size:18px;letter-spacing:3px}.portada-v3__texto{text-align:center;align-items:center}.portada-v3__copy{text-align:center}.portada-v3__linea{width:100%}}
