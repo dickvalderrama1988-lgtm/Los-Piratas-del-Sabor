@@ -21,6 +21,137 @@
 @media(max-width:850px){.gallery-grid{grid-template-columns:1fr 1fr}.gallery-grid img{height:230px}}
 @media(max-width:520px){.gallery-grid{grid-template-columns:1fr}.gallery-grid img{height:260px}}
 
-/* PORTADA NUEVA */
-.hero-split{min-height:760px;display:grid;grid-template-columns:46% 54%;background:#090909;color:#fff;overflow:hidden;position:relative;border-top:1px solid rgba(217,155,43,.28)}
-.hero-split:before{display:none}.hero-left{padding:76px 5vw 44px;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 45% 40%,rgba(217,155,43,.07),transparent 38%),#090909;z-index:2}.hero-right{min-height:760px;background:#050505;display:flex;align-items:center;justify-content:center;overflow:hidden;border-left:1px solid rgba(255,255,255,.05)}.hero-right img{width:100%;height:100%;max-height:760px;object-fit:contain;display:block;background:#050505}.hero-split .eyebrow{font-size:14px;letter-spacing:3px;margin:0 0 10px}.hero-divider{width:100%;max-width:520px;display:flex;align-items:center;gap:14px;color:#d99b2b;margin:6px 0 20px}.hero-divider:before,.hero-divider:after{content:"";height:1px;background:#d99b2b;flex:1;opacity:.7}.hero-divider span{font-size:25px}.hero-split h1{font-family:"Pirata One",serif;font-size:clamp(76px,7.4vw,132px);line-height:.78;margin:8px 0 30px;letter-spacing:2px;text-shadow:0 8px 30px rgba(0,0,0,.65)}.hero-split h1 span{color:#e0a73b}.hero-split .hero-copy{max-width:650px;font-size:18px;line-height:1.75;color:#eee7da}.hero-split .hero-actions{margin-top:28px;gap:12px}.hero-split .btn{border-radius:14px;padding:16px 20px}.hero-features{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px;padding-top:26px;border-top:1px solid rgba(217,155,43,.5)}.hero-features div{padding:0 18px;border-right:1px solid rgba(255,255,255,.1)}.hero-features div:first-child{padding-left:0}.hero-features div:last-child{border-right:0}.hero-features strong,.hero-features span{display:block}.hero-features strong{font-size:14px;margin-bottom:8px}.hero-features span{font-size:12px;color:#cfc8bc;line-height:1.45}.hero-photo{background-image:none!important}.hero-photo .hero-overlay{display:none!important}@media(max-width:1000px){.hero-split{grid-template-columns:1fr 1fr}.hero-split h1{font-size:72px}.hero-left{padding:60px 4vw 40px}.hero-features{grid-template-columns:1fr;gap:14px}.hero-features div{border-right:0;padding:0}}@media(max-width:850px){.hero-split{grid-template-columns:1fr;min-height:auto}.hero-left{order:1;padding:55px 6vw 38px}.hero-right{order:2;min-height:auto;padding:18px 18px 34px}.hero-right img{height:auto;max-height:none;width:min(100%,620px)}.hero-split h1{font-size:clamp(62px,15vw,92px)}.hero-split .hero-actions .btn{width:100%;text-align:center}}
+
+/* ===== PORTADA V3 AISLADA: NO HEREDA EL HERO ANTERIOR ===== */
+.portada-v3{
+  width:100%;
+  min-height:760px;
+  display:flex;
+  align-items:stretch;
+  background:#080808;
+  color:#fff;
+  overflow:hidden;
+  border-top:1px solid rgba(217,155,43,.25);
+}
+.portada-v3__texto{
+  flex:0 0 46%;
+  max-width:46%;
+  min-width:0;
+  padding:64px 4.5vw 40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:linear-gradient(115deg,#070707 0%,#0d0b09 70%,#151009 100%);
+}
+.portada-v3__foto{
+  flex:0 0 54%;
+  max-width:54%;
+  min-width:0;
+  min-height:760px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#050505;
+  border-left:1px solid rgba(217,155,43,.14);
+  overflow:hidden;
+}
+.portada-v3__foto img{
+  display:block;
+  width:auto;
+  max-width:100%;
+  height:760px;
+  max-height:760px;
+  object-fit:contain;
+}
+.portada-v3__eyebrow{
+  margin:0 0 12px;
+  color:#dfa32e;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:3.2px;
+}
+.portada-v3__linea{
+  max-width:520px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:#dfa32e;
+  margin:0 0 22px;
+}
+.portada-v3__linea:before,.portada-v3__linea:after{
+  content:"";
+  height:1px;
+  flex:1;
+  background:#dfa32e;
+  opacity:.75;
+}
+.portada-v3__linea span{font-size:24px;line-height:1}
+.portada-v3 h1{
+  font-family:"Pirata One",serif;
+  font-size:clamp(70px,6.2vw,112px);
+  line-height:.8;
+  letter-spacing:1px;
+  margin:0 0 28px;
+  text-shadow:0 8px 28px rgba(0,0,0,.7);
+}
+.portada-v3 h1 span{color:#e0a73b}
+.portada-v3__copy{
+  max-width:650px;
+  margin:0;
+  color:#eee7dc;
+  font-size:17px;
+  line-height:1.7;
+}
+.portada-v3__acciones{
+  display:flex;
+  flex-wrap:wrap;
+  gap:11px;
+  margin-top:28px;
+}
+.portada-v3__acciones .btn{
+  padding:15px 18px;
+  border-radius:14px;
+  font-size:13px;
+  white-space:nowrap;
+}
+.portada-v3__btn{
+  color:#fff;
+  border:1px solid rgba(255,255,255,.35);
+  background:transparent;
+}
+.portada-v3__beneficios{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:0;
+  margin-top:38px;
+  padding-top:24px;
+  border-top:1px solid rgba(217,155,43,.48);
+}
+.portada-v3__beneficios>div{
+  min-width:0;
+  padding:0 16px;
+  border-right:1px solid rgba(255,255,255,.1);
+}
+.portada-v3__beneficios>div:first-child{padding-left:0}
+.portada-v3__beneficios>div:last-child{padding-right:0;border-right:0}
+.portada-v3__beneficios strong,.portada-v3__beneficios span{display:block}
+.portada-v3__beneficios strong{font-size:13px;line-height:1.35;margin-bottom:5px}
+.portada-v3__beneficios span{font-size:11px;line-height:1.4;color:#c8c1b8}
+
+@media(max-width:1120px){
+  .portada-v3__texto{flex-basis:50%;max-width:50%;padding-left:4vw;padding-right:3vw}
+  .portada-v3__foto{flex-basis:50%;max-width:50%}
+  .portada-v3 h1{font-size:72px}
+  .portada-v3__acciones .btn{font-size:12px;padding:13px 12px}
+  .portada-v3__beneficios{grid-template-columns:1fr;gap:10px}
+  .portada-v3__beneficios>div{padding:0;border-right:0}
+}
+@media(max-width:850px){
+  .portada-v3{display:block;min-height:0}
+  .portada-v3__texto,.portada-v3__foto{max-width:none;width:100%}
+  .portada-v3__texto{padding:50px 6vw 34px}
+  .portada-v3__foto{min-height:0;padding:18px 15px 30px}
+  .portada-v3__foto img{width:min(100%,620px);height:auto;max-height:none}
+  .portada-v3 h1{font-size:clamp(60px,15vw,88px)}
+  .portada-v3__acciones .btn{width:100%;text-align:center}
+}
